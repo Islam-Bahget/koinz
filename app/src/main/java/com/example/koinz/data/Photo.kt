@@ -1,9 +1,13 @@
+package com.example.koinz.data
+
+
+import androidx.annotation.Nullable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "photos")
-class PhotoItem(
+class Photo(
     @field:SerializedName("owner")
     val owner: String? = null,
 
@@ -22,8 +26,9 @@ class PhotoItem(
     val farm: Int? = null,
 
     @PrimaryKey
+    @Nullable
     @field:SerializedName("id")
-    val id: String? = null,
+    val id: String,
 
     @field:SerializedName("secret")
     val secret: String? = null,

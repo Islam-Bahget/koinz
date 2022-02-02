@@ -6,6 +6,10 @@ import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.TimeoutException
 
+/**
+ * extension fun to  handle livedata from room database
+ * */
+
 fun <T> LiveData<T>.getOrAwaitValue(): T {
     var data: T? = null
     val latch = CountDownLatch(1)
