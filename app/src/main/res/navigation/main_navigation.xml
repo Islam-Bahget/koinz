@@ -10,7 +10,11 @@
         android:id="@+id/homeFragment"
         android:name="com.example.koinz.fragments.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/open_image"
+            app:destination="@id/displayFragment" />
+    </fragment>
     <fragment
         android:id="@+id/displayFragment"
         android:name="com.example.koinz.fragments.DisplayImageFragment"

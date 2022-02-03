@@ -26,7 +26,7 @@ data class Photos(
     val pages: Int? = null,
 
     @field:SerializedName("photo")
-    val photo: List<Photo?>? = null,
+    val photo: List<Photo>? = null,
 
     @field:SerializedName("page")
     val page: Int? = null

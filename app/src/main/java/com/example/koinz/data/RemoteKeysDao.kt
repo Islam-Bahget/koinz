@@ -11,7 +11,7 @@ interface RemoteKeysDao {
     suspend fun insertRemoteKeys(remoteKeys: List<PhotosRemoteKey>)
 
     @Query("SELECT * FROM photosremotekey WHERE photosId = :id")
-    fun remoteKeysPhotoId(id: String): PhotosRemoteKey?
+    suspend fun remoteKeysPhotoId(id: String): PhotosRemoteKey?
 
     @Query("DELETE FROM photosremotekey")
     suspend fun clearRemoteKeys()

@@ -13,7 +13,7 @@ interface PhotosDao {
     suspend fun insertAll(photos: List<Photo>)
 
     @Query("SELECT * FROM photos")
-     fun getAllPhotos(): PagingSource<Int, Photo>
+    fun getAllPhotos(): PagingSource<Int, Photo>
 
     @Query("DELETE FROM photos")
     suspend fun clearPhotos()
